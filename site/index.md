@@ -1,10 +1,10 @@
 # AI × Kubernetes Red Teaming
 
-Quiet, useful research. No hype.
+Documentation for tools and checks used in AI/LLM security testing and Kubernetes offensive validation.
 
 ## Tracks
-- [AI Pentesting](ai/index.md): prompt injection, RAG abuse, vector threats, data leakage.
-- [Kubernetes Offense](k8s/index.md): RBAC privesc, bad pods, lateral movement, covert exfil.
+- [AI Pentesting](ai/index.md): prompt injection, RAG abuse, vector threats, and data leakage tests.
+- [Kubernetes Offense](k8s/index.md): RBAC visualization, bad-pod admission tests, and cluster enumeration.
 
-## Ethos
-Operate legally, think deeply, ship small practical tools weekly.
+## Scope
+All examples are intended for authorized environments. Many tests are designed to fail on hardened setups to validate controls.
