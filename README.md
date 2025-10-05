@@ -1,21 +1,21 @@
 # AI × Kubernetes Red Teaming — Monorepo
 
-**Purpose:** A practical, legally safe starter kit for building an elite niche at the intersection of **AI/LLM pentesting** and **Kubernetes offensive security**.
-
-> ⚠️ **Legal/Ethical**: All tools here are for **authorized testing in lab or client-approved environments** only. You are responsible for following the law and your engagement’s rules of engagement.
+A practical toolkit for authorized testing at the intersection of **AI/LLM security** and **Kubernetes offensive testing**.
 
 ## Contents
-- `site/` — GitHub Pages docs (Jekyll) so your profile quietly showcases research without self‑promotion.
-- `ai-pentest-harness/` — Pluggable YAML-driven test harness for prompt-injection, data-leak, and RAG fuzzing.
-- `vector-sanity/` — Fast scanners for secrets/PII in RAG corpora and embeddings metadata.
-- `rag-attack-sim/` — Canary generators and adversarial content builders for RAG pipelines.
-- `k8s-redteam-kit/` — Bad-pods, fast enumeration, and practical checks for K8s misconfig & escalation.
-- `k8s-rbac-graph/` — Build a DOT graph of RBAC relationships and highlight likely privesc paths.
+- `site/` — Documentation (Jekyll) for usage, design notes, and change logs.
+- `ai-pentest-harness/` — YAML-driven test harness for prompt injection, RAG leakage, and guardrail validation.
+- `vector-sanity/` — Pre-index scanners to detect secrets/PII in RAG corpora.
+- `rag-attack-sim/` — Canary token generator and adversarial document builders for RAG pipelines.
+- `k8s-redteam-kit/` — Bad-pods and enumeration scripts to validate cluster hardening.
+- `k8s-rbac-graph/` — RBAC visualizer (Graphviz DOT) with heuristics for risky bindings.
+
+> **Legal/Ethical**: Use only with explicit authorization (labs or engagements). You are responsible for complying with laws and rules of engagement.
 
 ## Getting Started
-1. Create a new GitHub repository and upload this folder (or split into separate repos later).
-2. Enable **GitHub Pages** to publish from `site/` (Settings ▸ Pages ▸ Build and deployment ▸ Source: GitHub Actions or "Deploy from a branch" with `/site` as root).
-3. Customize `site/index.md` and commit. Your personal site becomes your quiet living portfolio.
+1. Clone this repository.
+2. See each tool’s `README` for quickstart commands.
+3. (Optional) Enable GitHub Pages under `site/` to publish the documentation.
 
-## Why this approach?
-You don’t need YouTube or personal branding. A living, useful **body of work** is enough. This repo keeps you shipping: small tools, docs, and experiments every week.
+## Why this repository
+This monorepo consolidates small, practical tools and repeatable checks to speed up assessments of LLM/RAG stacks and Kubernetes environments. The focus is reproducibility and minimalism.
