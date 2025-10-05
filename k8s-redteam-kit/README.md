@@ -2,7 +2,7 @@
 
 **Bad Pods** to validate admission control, **enum scripts** to understand your position, and **RBAC dumpers**.
 
-> Use only in *authorized* clusters. Many examples will fail if controls are correctly configured — that's the point.
+> Use only in *authorized* clusters. Many examples will fail if controls are correctly configured - that's the point.
 
 ## Quickstart
 ```bash
