@@ -15,7 +15,6 @@ A practical toolkit for authorized testing at the intersection of **AI/LLM secur
 ## Getting Started
 1. Clone this repository.
 2. See each tool’s `README` for quickstart commands.
-3. (Optional) Enable GitHub Pages under `site/` to publish the documentation.
 
 ## Why this repository
 This monorepo consolidates small, practical tools and repeatable checks to speed up assessments of LLM/RAG stacks and Kubernetes environments. The focus is reproducibility and minimalism.
