@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rt-hostpath
+spec:
+  containers:
+  - name: c
+    image: alpine:3
+    volumeMounts:
+      - name: host
+        mountPath: /host
+  volumes:
+  - name: host
+    hostPath:
+      path: /
+      type: Directory

@@ -1,0 +1,31 @@
+name: sanity-ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --upgrade pip
+      - name: Basic static checks (no deps)
+        run: |
+          python - <<'PY'
+          import os, sys
+          bad_tabs = []
+          for root, _, files in os.walk('.'):
+            for f in files:
+              if f.endswith(('.py', '.sh', '.yaml', '.yml', '.md')):
+                p = os.path.join(root, f)
+                with open(p, 'rb') as fh:
+                  if b'\t' in fh.read():
+                    bad_tabs.append(p)
+          if bad_tabs:
+            print("Tabs found (use spaces):", *bad_tabs, sep="\n- ")
+            sys.exit(1)
+          print("Static checks OK")
+          PY

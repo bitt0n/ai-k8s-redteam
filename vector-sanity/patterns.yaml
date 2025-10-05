@@ -1,0 +1,16 @@
+# Extend as needed
+patterns:
+  - name: AWS Access Key
+    regex: AKIA[0-9A-Z]{16}
+  - name: AWS Secret (weak heuristic)
+    regex: (?i)aws(.{0,20})?(secret|access)[^\n]{0,120}
+  - name: Google API Key
+    regex: AIza[0-9A-Za-z\-_]{35}
+  - name: Slack Token
+    regex: xox[baprs]-[0-9a-zA-Z]{10,48}
+  - name: Private Key Block
+    regex: -----BEGIN (RSA|EC|DSA|OPENSSH) PRIVATE KEY-----
+  - name: Email
+    regex: [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+  - name: IPv4
+    regex: (?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)
